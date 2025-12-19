@@ -4,78 +4,78 @@
 ![Platform](https://img.shields.io/badge/platform-Google%20Apps%20Script-green.svg)
 ![License](https://img.shields.io/badge/license-MIT-orange.svg)
 
-**ED Trading Journal** adalah aplikasi web interaktif untuk mencatat, memantau, dan menganalisis trading Anda secara real-time. Dibangun dengan Google Apps Script dan terintegrasi dengan Google Sheets untuk penyimpanan data.
+**ED Trading Journal** is an interactive web application for recording, monitoring, and analyzing your trades in real-time. Built with Google Apps Script and integrated with Google Sheets for data storage.
 
 ## 🔗 Live Demo
 
-Aplikasi ini dapat diakses di: [ED Trading Journal Live](https://script.google.com/macros/s/AKfycbwMDd4GoW_MrnVWKwbCHK95d3ILwsSJumHJiUqafQXyaQ1lu9proIYO2ZfKxTnea6Fg/exec)
+Access the application at: [ED Trading Journal Live](https://script.google.com/macros/s/AKfycbwMDd4GoW_MrnVWKwbCHK95d3ILwsSJumHJiUqafQXyaQ1lu9proIYO2ZfKxTnea6Fg/exec)
 
 ## ⚠️ Important Disclaimer
 
 > **NOT FINANCIAL ADVICE**
 >
-> Aplikasi ini adalah **personal trading journal** yang saya buat untuk keperluan pribadi dalam mencatat dan menganalisis trading saya sendiri. Aplikasi ini di-share secara publik untuk keperluan edukasi dan referensi.
+> This application is a **personal trading journal** that I created for my own personal use in recording and analyzing my trading activities. This application is shared publicly for educational and reference purposes only.
 >
-> - ❌ **BUKAN saran investasi atau trading**
-> - ❌ **BUKAN rekomendasi untuk membeli/menjual aset apapun**
-> - ✅ Hanya tools untuk **journaling dan tracking** trading pribadi
-> - ✅ Semua keputusan trading adalah **tanggung jawab Anda sendiri**
+> - ❌ **NOT investment or trading advice**
+> - ❌ **NOT a recommendation to buy/sell any assets**
+> - ✅ Only a tool for **journaling and tracking** personal trades
+> - ✅ All trading decisions are **your own responsibility**
 >
-> **Trading memiliki risiko tinggi. Hanya gunakan dana yang siap Anda rugikan. Selalu lakukan riset dan analisis Anda sendiri.**
+> **Trading involves high risk. Only use funds you can afford to lose. Always do your own research and analysis.**
 
 ---
 
-## ✨ Fitur Utama
+## ✨ Key Features
 
-### 📊 Dashboard Real-time
+### 📊 Real-time Dashboard
 
-- **Live Tracking**: Pantau semua trading yang sedang berjalan dengan update harga real-time
-- **Multi-Market Support**: Support untuk berbagai market (IDX, US, Crypto, dll)
-- **Status Trading**: RUNNING, CLOSED WIN, CLOSED LOSS
+- **Live Tracking**: Monitor all running trades with real-time price updates
+- **Multi-Market Support**: Support for various markets (IDX, US, Crypto, etc.)
+- **Trading Status**: RUNNING, CLOSED WIN, CLOSED LOSS
 
-### 📈 Analisis Performa
+### 📈 Performance Analysis
 
-- **KPI Cards**: Lihat metrik penting seperti Total PnL, Win Rate, Average Win/Loss
-- **Chart Visualisasi**: Grafik performa trading dengan Chart.js
-- **Risk Management**: Tracking Risk/Reward Ratio untuk setiap trade
+- **KPI Cards**: View important metrics such as Total PnL, Win Rate, Average Win/Loss
+- **Chart Visualization**: Trading performance graphs with Chart.js
+- **Risk Management**: Track Risk/Reward Ratio for each trade
 
 ### 🎯 Risk Management
 
-- **Risk Heat Indicator**: Sistem peringatan otomatis untuk trades berisiko tinggi
-- **Distance to SL/TP**: Indikator jarak harga current ke Stop Loss/Take Profit
-- **Risk Grouping**: Trades dikelompokkan berdasarkan tingkat risiko (High/Medium/Low)
+- **Risk Heat Indicator**: Automatic warning system for high-risk trades
+- **Distance to SL/TP**: Current price distance indicator to Stop Loss/Take Profit
+- **Risk Grouping**: Trades grouped by risk level (High/Medium/Low)
 
-### 🔍 Fitur Analisis Lanjutan
+### 🔍 Advanced Analysis Features
 
-- **Market Filter**: Filter trades berdasarkan market tertentu
-- **Equity Regime**: Indikator "HOT" atau "COLD" streak
-- **Win/Loss Streak Tracker**: Pantau streak kemenangan atau kekalahan
-- **TradingView Integration**: Link langsung ke chart TradingView
+- **Market Filter**: Filter trades by specific market
+- **Equity Regime**: "HOT" or "COLD" streak indicator
+- **Win/Loss Streak Tracker**: Monitor winning or losing streaks
+- **TradingView Integration**: Direct link to TradingView charts
 
-### 🎨 UI/UX Modern
+### 🎨 Modern UI/UX
 
-- **Glassmorphism Design**: Interface modern dengan efek glass dan backdrop blur
-- **Dark Theme**: Tema gelap yang nyaman untuk mata
-- **Responsive Layout**: Tampilan optimal di berbagai ukuran layar
-- **Real-time Updates**: Data refresh otomatis tanpa reload halaman
+- **Glassmorphism Design**: Modern interface with glass effect and backdrop blur
+- **Dark Theme**: Eye-friendly dark theme
+- **Responsive Layout**: Optimal display on various screen sizes
+- **Real-time Updates**: Automatic data refresh without page reload
 
 ---
 
-## 🚀 Cara Setup
+## 🚀 Setup Guide
 
 ### Prerequisites
 
-- Akun Google (Gmail)
+- Google Account (Gmail)
 - Google Sheets
-- Browser modern (Chrome, Firefox, Edge, Safari)
+- Modern browser (Chrome, Firefox, Edge, Safari)
 
-### Langkah Instalasi
+### Installation Steps
 
 1. **Setup Google Sheets**
 
-   - Buat Google Sheets baru
-   - Buat sheet dengan nama "Main"
-   - Buat kolom dengan header berikut (Row 1):
+   - Create a new Google Sheets
+   - Create a sheet named "Main"
+   - Create columns with the following headers (Row 1):
      ```
      A: Date
      B: Time
@@ -95,89 +95,89 @@ Aplikasi ini dapat diakses di: [ED Trading Journal Live](https://script.google.c
 
 2. **Setup Google Apps Script**
 
-   - Buka Google Sheets Anda
-   - Klik `Extensions` > `Apps Script`
-   - Hapus kode default, paste kode dari `code.gs`
-   - Ganti Spreadsheet ID di baris 10 dengan ID Sheets Anda:
+   - Open your Google Sheets
+   - Click `Extensions` > `Apps Script`
+   - Delete the default code, paste code from `code.gs`
+   - Replace the Spreadsheet ID on line 10 with your Sheet ID:
      ```javascript
-     const ss = SpreadsheetApp.openById("GANTI_DENGAN_ID_SHEETS_ANDA");
+     const ss = SpreadsheetApp.openById("REPLACE_WITH_YOUR_SHEET_ID");
      ```
-   - Klik `File` > `New` > `HTML File`
-   - Beri nama `index`
-   - Paste kode dari `index.html`
+   - Click `File` > `New` > `HTML File`
+   - Name it `index`
+   - Paste code from `index.html`
 
-3. **Deploy sebagai Web App**
+3. **Deploy as Web App**
 
-   - Klik tombol `Deploy` > `New deployment`
-   - Pilih type: `Web app`
+   - Click `Deploy` button > `New deployment`
+   - Select type: `Web app`
    - Execute as: `Me`
-   - Who has access: `Anyone` (atau sesuai kebutuhan)
-   - Klik `Deploy`
-   - Copy URL web app yang diberikan
-   - Buka URL tersebut di browser
+   - Who has access: `Anyone` (or as needed)
+   - Click `Deploy`
+   - Copy the provided web app URL
+   - Open the URL in your browser
 
 4. **Authorize Permission**
-   - Saat pertama kali akses, Google akan meminta permission
-   - Klik `Advanced` > `Go to [Project Name] (unsafe)`
-   - Klik `Allow`
+   - On first access, Google will request permission
+   - Click `Advanced` > `Go to [Project Name] (unsafe)`
+   - Click `Allow`
 
 ---
 
-## 📖 Cara Penggunaan
+## 📖 How to Use
 
-### Input Trading Baru
+### Add New Trade
 
-1. Buka Google Sheets Anda
-2. Tambahkan baris baru di sheet "Main"
-3. Isi data trading:
-   - **Date**: Tanggal trade
-   - **Time**: Waktu entry
-   - **Ticker**: Symbol saham/crypto (misal: BBRI, BTCUSDT)
-   - **Market**: IDX, US, Crypto, dll
-   - **Type**: LONG atau SHORT
-   - **Entry Price**: Harga entry
-   - **TP Price**: Target profit
+1. Open your Google Sheets
+2. Add a new row in the "Main" sheet
+3. Fill in the trade data:
+   - **Date**: Trade date
+   - **Time**: Entry time
+   - **Ticker**: Stock/crypto symbol (e.g., BBRI, BTCUSDT)
+   - **Market**: IDX, US, Crypto, etc.
+   - **Type**: LONG or SHORT
+   - **Entry Price**: Entry price
+   - **TP Price**: Take profit target
    - **SL Price**: Stop loss
-   - **RR Ratio**: (opsional, bisa dihitung otomatis)
+   - **RR Ratio**: (optional, can be auto-calculated)
    - **Status**: RUNNING / CLOSED WIN / CLOSED LOSS
-   - **Current Price**: Harga terkini (untuk running trades)
-   - **Exit Price**: Harga exit (untuk closed trades)
+   - **Current Price**: Current price (for running trades)
+   - **Exit Price**: Exit price (for closed trades)
    - **PnL**: Profit/Loss
-   - **TradingView Link**: Link ke chart (opsional)
+   - **TradingView Link**: Chart link (optional)
 
-### Monitoring Dashboard
+### Dashboard Monitoring
 
-1. Buka web app URL yang sudah di-deploy
-2. Dashboard akan menampilkan:
-   - **Tab "PRO TRADER"**: View trading dengan risk indicator
-   - **Tab "ANALYSIS"**: View analisis dan statistik
-   - **KPI Cards**: Total PnL, Win Rate, Average Win/Loss, dll
-   - **Running Trades**: Trades yang masih aktif dengan risk heat indicator
-   - **Closed Trades**: History trades yang sudah selesai
+1. Open the deployed web app URL
+2. The dashboard will display:
+   - **"PRO TRADER" Tab**: Trading view with risk indicator
+   - **"ANALYSIS" Tab**: Analysis and statistics view
+   - **KPI Cards**: Total PnL, Win Rate, Average Win/Loss, etc.
+   - **Running Trades**: Active trades with risk heat indicator
+   - **Closed Trades**: History of completed trades
 
-### Interpretasi Risk Indicator
+### Risk Indicator Interpretation
 
-- 🔴 **HIGH RISK**: Harga mendekati Stop Loss (< 30% dari range)
-- 🟡 **MEDIUM RISK**: Harga di zona tengah
-- 🟢 **LOW RISK**: Harga mendekati Take Profit
+- 🔴 **HIGH RISK**: Price approaching Stop Loss (< 30% of range)
+- 🟡 **MEDIUM RISK**: Price in middle zone
+- 🟢 **LOW RISK**: Price approaching Take Profit
 
 ---
 
-## 🛠️ Teknologi yang Digunakan
+## 🛠️ Technologies Used
 
-- **Google Apps Script**: Backend dan server-side logic
-- **Google Sheets**: Database untuk menyimpan trading data
-- **HTML5/CSS3**: Frontend structure dan styling
+- **Google Apps Script**: Backend and server-side logic
+- **Google Sheets**: Database for storing trading data
+- **HTML5/CSS3**: Frontend structure and styling
 - **Vanilla JavaScript**: Client-side scripting
-- **Chart.js**: Library untuk visualisasi grafik
+- **Chart.js**: Library for chart visualization
 
 ---
 
 ## 🎨 Customization
 
-### Mengubah Warna Tema
+### Change Theme Colors
 
-Edit CSS variables di `index.html`:
+Edit CSS variables in `index.html`:
 
 ```css
 :root {
@@ -188,9 +188,9 @@ Edit CSS variables di `index.html`:
 }
 ```
 
-### Menambah Market Baru
+### Add New Market
 
-Edit fungsi di `index.html` pada bagian market filter:
+Edit the function in `index.html` in the market filter section:
 
 ```javascript
 <option value="ALL">All Markets</option>
@@ -200,9 +200,9 @@ Edit fungsi di `index.html` pada bagian market filter:
 <option value="NEW_MARKET">Your New Market</option>
 ```
 
-### Mengubah Spreadsheet ID
+### Change Spreadsheet ID
 
-Edit di `code.gs` baris 10:
+Edit in `code.gs` line 10:
 
 ```javascript
 const ss = SpreadsheetApp.openById("YOUR_SPREADSHEET_ID");
@@ -212,65 +212,65 @@ const ss = SpreadsheetApp.openById("YOUR_SPREADSHEET_ID");
 
 ## 📝 Tips & Best Practices
 
-1. **Konsisten Input Data**: Selalu isi data dengan format yang konsisten
-2. **Update Current Price**: Untuk running trades, update current price secara berkala
-3. **Gunakan RR Ratio**: Minimal 1:2 untuk risk management yang baik
-4. **Review Rutin**: Cek dashboard secara rutin untuk monitor risk exposure
-5. **Backup Data**: Export Google Sheets Anda secara berkala
-6. **Risk Management**: Jangan over-trade atau over-leverage
+1. **Consistent Data Input**: Always fill in data with a consistent format
+2. **Update Current Price**: For running trades, update current price regularly
+3. **Use RR Ratio**: Minimum 1:2 for good risk management
+4. **Regular Review**: Check dashboard regularly to monitor risk exposure
+5. **Backup Data**: Export your Google Sheets periodically
+6. **Risk Management**: Don't over-trade or over-leverage
 
 ---
 
 ## 🐛 Troubleshooting
 
-### Dashboard tidak muncul
+### Dashboard not showing
 
-- Pastikan sudah authorize permission Google Apps Script
-- Clear cache browser dan reload
+- Make sure you've authorized Google Apps Script permissions
+- Clear browser cache and reload
 
-### Data tidak update
+### Data not updating
 
-- Refresh halaman web app
-- Cek koneksi internet
-- Pastikan Spreadsheet ID sudah benar
+- Refresh the web app page
+- Check internet connection
+- Make sure Spreadsheet ID is correct
 
-### Error "Permission Denied"
+### "Permission Denied" Error
 
 - Re-authorize Apps Script
-- Pastikan setting "Who has access" sudah benar di deployment
+- Make sure "Who has access" setting is correct in deployment
 
 ---
 
-## 📊 Struktur Data Sheet
+## 📊 Sheet Data Structure
 
 | Column | Field            | Type        | Description                    |
 | ------ | ---------------- | ----------- | ------------------------------ |
-| A      | Date             | Date        | Tanggal trade                  |
-| B      | Time             | Time        | Waktu entry                    |
-| C      | Ticker           | Text        | Symbol trading                 |
+| A      | Date             | Date        | Trade date                     |
+| B      | Time             | Time        | Entry time                     |
+| C      | Ticker           | Text        | Trading symbol                 |
 | D      | Market           | Text        | Market (IDX/US/Crypto)         |
-| E      | Type             | Text        | LONG atau SHORT                |
-| F      | Entry Price      | Number      | Harga masuk                    |
+| E      | Type             | Text        | LONG or SHORT                  |
+| F      | Entry Price      | Number      | Entry price                    |
 | G      | TP Price         | Number      | Take Profit target             |
 | H      | SL Price         | Number      | Stop Loss                      |
 | I      | RR Ratio         | Text/Number | Risk Reward Ratio              |
 | J      | Status           | Text        | RUNNING/CLOSED WIN/CLOSED LOSS |
-| K      | Current Price    | Number      | Harga saat ini (running)       |
-| L      | Exit Price       | Number      | Harga keluar (closed)          |
+| K      | Current Price    | Number      | Current price (running)        |
+| L      | Exit Price       | Number      | Exit price (closed)            |
 | M      | PnL              | Number      | Profit/Loss amount             |
-| N      | TradingView Link | URL         | Link ke chart (opsional)       |
+| N      | TradingView Link | URL         | Chart link (optional)          |
 
 ---
 
-## 🤝 Kontribusi
+## 🤝 Contributing
 
-Contributions, issues, dan feature requests sangat diterima!
+Contributions, issues, and feature requests are welcome!
 
 ---
 
 ## 📄 License
 
-Project ini menggunakan [MIT License](https://opensource.org/licenses/MIT).
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
 ---
 
@@ -278,17 +278,17 @@ Project ini menggunakan [MIT License](https://opensource.org/licenses/MIT).
 
 **ED Trading Journal**
 
-Dibuat dengan ❤️ untuk para trader Indonesia
+Made with ❤️ for traders
 
 ---
 
 ## 📞 Support
 
-Jika ada pertanyaan atau butuh bantuan, silakan:
+If you have questions or need help:
 
-- Buat issue di repository
-- Kontak via email
-- Join komunitas trading
+- Create an issue in the repository
+- Contact via email
+- Join the trading community
 
 ---
 
@@ -306,4 +306,4 @@ Jika ada pertanyaan atau butuh bantuan, silakan:
 
 ---
 
-**Happy Trading! 📈**"
+**Happy Trading! 📈**
