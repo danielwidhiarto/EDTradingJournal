@@ -1,4 +1,4 @@
-"# ED Trading Journal
+# ED Trading Journal
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 ![Platform](https://img.shields.io/badge/platform-Google%20Apps%20Script-green.svg)
