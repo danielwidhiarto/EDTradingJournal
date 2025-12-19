@@ -6,6 +6,23 @@
 
 **ED Trading Journal** adalah aplikasi web interaktif untuk mencatat, memantau, dan menganalisis trading Anda secara real-time. Dibangun dengan Google Apps Script dan terintegrasi dengan Google Sheets untuk penyimpanan data.
 
+## 🔗 Live Demo
+
+Aplikasi ini dapat diakses di: [ED Trading Journal Live](https://script.google.com/macros/s/AKfycbwMDd4GoW_MrnVWKwbCHK95d3ILwsSJumHJiUqafQXyaQ1lu9proIYO2ZfKxTnea6Fg/exec)
+
+## ⚠️ Important Disclaimer
+
+> **NOT FINANCIAL ADVICE**
+>
+> Aplikasi ini adalah **personal trading journal** yang saya buat untuk keperluan pribadi dalam mencatat dan menganalisis trading saya sendiri. Aplikasi ini di-share secara publik untuk keperluan edukasi dan referensi.
+>
+> - ❌ **BUKAN saran investasi atau trading**
+> - ❌ **BUKAN rekomendasi untuk membeli/menjual aset apapun**
+> - ✅ Hanya tools untuk **journaling dan tracking** trading pribadi
+> - ✅ Semua keputusan trading adalah **tanggung jawab Anda sendiri**
+>
+> **Trading memiliki risiko tinggi. Hanya gunakan dana yang siap Anda rugikan. Selalu lakukan riset dan analisis Anda sendiri.**
+
 ---
 
 ## ✨ Fitur Utama
